@@ -6,3 +6,6 @@
 # Process OS Specific Setup
 - include: setup-Debian.yml
   when: ansible_os_family == 'Debian'
+
+- name: Ensure mongodb is started and set to run on startup.
+  service: name=mongod state=started enabled=yes
