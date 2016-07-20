@@ -4,7 +4,7 @@
 - name: Add repository key
   apt_key:
     id: EA312927
-    url: hkp://keyserver.ubuntu.com:80
+    url: http://keyserver.ubuntu.com
     state: present
 
 - name: Add mongodb apt source
