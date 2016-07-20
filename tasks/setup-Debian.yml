@@ -4,7 +4,7 @@
 - name: Add repository key
   apt_key:
     id: EA312927
-    url: http://keyserver.ubuntu.com
+    url: "http://keyserver.ubuntu.com/pks/lookup?op=get&fingerprint=on&search=0xEA312927"
     state: present
 
 - name: Add mongodb apt source
