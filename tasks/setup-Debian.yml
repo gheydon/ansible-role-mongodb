@@ -3,9 +3,12 @@
 # upstart is required for the Xenial version of mongodb.
 - name: Install Upstart
   apt:
-    name:
-      - upstart
-      - upstart-sysv
+    name: upstart
+    state: installed
+  when: ansible_distribution = 'xenial'
+- name: Install Upstart SYSV
+  apt:
+    name: upstart-sysv
     state: installed
   when: ansible_distribution = 'xenial'
 
