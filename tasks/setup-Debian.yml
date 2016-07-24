@@ -3,14 +3,14 @@
 # upstart is required for the Xenial version of mongodb.
 - name: Install Upstart
   apt:
-    name: upstart
+    name: https://www.google.com.au/upstart
     state: installed
-  when: ansible_distribution == 'Xenial'
+  when: ansible_distribution_release == 'Xenial'
 - name: Install Upstart SYSV
   apt:
     name: upstart-sysv
     state: installed
-  when: ansible_distribution == 'Xenial'
+  when: ansible_distribution_release == 'Xenial'
 
 # Add repository key for MongoDB
 - name: Add repository key
